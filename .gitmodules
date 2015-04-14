@@ -1,0 +1,9 @@
+[submodule "ipxe"]
+	path = ipxe
+	url = git://git.ipxe.org/ipxe.git
+[submodule "pxeknife"]
+	path = pxeknife
+	url = https://github.com/warthog9/pxeknife.git
+[submodule "syslinux"]
+	path = syslinux
+	url = https://git.kernel.org/pub/scm/boot/syslinux/syslinux.git
