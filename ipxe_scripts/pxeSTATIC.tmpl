@@ -1,0 +1,16 @@
+#!gpxe
+echo As you dont have DHCP, you need to give details about network configuration
+echo Soon, you will be presented with interface to provide details about network configuration
+echo Please provide, IP address, Netmask, Gateway and Router
+ifopen net0
+set net0/ip 10.0.2.15
+set net0/netmask 255.255.255.0
+set net0/gateway 10.0.2.2
+set net0/dns 10.0.2.3
+sleep 3
+config net0
+set 209:string pxelinux.cfg/default
+set 210:string P_BOOT_URL
+echo Here we go!
+chain ${210:string}pxelinux.0
+echo PxeKnife booting cancelled, using local disk instead...

@@ -1,0 +1,25 @@
+########################################################################
+################ BEGIN CUSTOMIZE ####################
+
+# modify the paths as per your need.
+
+# Please do not add any spaces before and after '='
+
+# URL to be used for embedding into compiled gpxe for downloading images.
+BASE_URL=http://bootboot.org/boot/
+
+# HTTP location on server where all iso images are kept.
+#ISO_LOCATION_LOCAL="http:\/\/mirrors.kernel.org\/ISO\/"
+#ISO_LOCATION_LOCAL="http:\/\/192.168.111.11\/ISO\/"
+#ISO_LOCATION_LOCAL="http:\/\/rom.etherboot.org\/share\/pravin\/ISO\/"
+
+
+################# Optional ####################
+
+# IP and Port for iscsi for local server
+#ISCSI_LOCATION_LOCAL="192.168.111.11:3260"
+#ISCSI_SERVER="boot.kernel.org:3260"
+
+################# END CUSTOMIZATION #################
+#######################################################################
+

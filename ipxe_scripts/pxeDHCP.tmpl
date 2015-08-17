@@ -1,0 +1,18 @@
+#!gpxe
+echo Hi User, We will be using BKO from URL P_BOOT_URL 
+echo We will try to use dhcp networking initially,
+echo Also loading pxeSTATIC.gpxe fallback script, just in case ......
+echo
+imgload pxeSTATIC.gpxe
+imgstat
+echo Opening first network interface ...
+ifopen net0
+echo If you don't have DHCP, then hit Control+C to cancel
+echo Otherwise, we will try DHCP, and then try static-IP upon failure
+sleep 4
+dhcp net0
+set 209:string pxelinux.cfg/default
+set 210:string P_BOOT_URL
+echo Here we go!
+chain ${210:string}pxelinux.0
+echo PxeKnife booting cancelled, using local disk instead...
